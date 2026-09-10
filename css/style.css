@@ -1557,7 +1557,7 @@ a {
 }
 
 /* ==========================================================================
-   Luxury Premium Gaming Buttons (Calm, Elegant & Ultra-High-End)
+   Cohesive Gaming Buttons Styles (Glitch, Cyber, Laser Shine - NO Spinning)
    ========================================================================== */
 
 .btn {
@@ -1566,83 +1566,117 @@ a {
   justify-content: center;
   gap: 0.65rem;
   padding: 0.85rem 1.8rem;
-  border-radius: 14px;
+  border-radius: 12px;
   font-weight: 700;
   font-size: 0.98rem;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   position: relative;
+  overflow: hidden;
   letter-spacing: -0.2px;
   border: none;
 }
 
-/* زر Kick الرئيسي الفاخر */
-.btn-primary {
+/* 1. زر السايبربانك بزوايا مقصوصة للديسكورد (Clipped Neon Button) */
+.btn-cyber {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 12px 28px;
+  background: #0d111a;
+  color: #5865f2 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(14px 0%, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0% 14px);
+  border-left: 3px solid #5865f2;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-cyber:hover {
+  background: #5865f2 !important;
+  color: #fff !important;
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.6);
+  transform: translateY(-2px);
+}
+
+/* 2. تأثير مسحة الليزر الهولوجرامية (Laser Shine Sweep - راقي وبدون أي لف) */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 25%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  transform: rotate(25deg);
+  transition: none;
+  pointer-events: none;
+}
+
+.btn-shine:hover::after {
+  left: 140%;
+  transition: 0.75s ease-in-out;
+}
+
+/* تخصيصات أزرار الليزر حسب لون المنصة */
+.btn-primary.btn-shine {
   background: linear-gradient(135deg, var(--kick-green) 0%, #00c853 100%);
   color: #000 !important;
   font-weight: 800;
   box-shadow: 0 4px 18px rgba(83, 252, 24, 0.25);
   border: 1px solid rgba(83, 252, 24, 0.4);
 }
-
-.btn-primary:hover {
+.btn-primary.btn-shine:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(83, 252, 24, 0.45);
+  box-shadow: 0 8px 30px rgba(83, 252, 24, 0.55);
   background: linear-gradient(135deg, #68ff33 0%, #00e676 100%);
-  color: #000 !important;
 }
 
-/* زر ديسكورد الهادئ الفخم */
-.btn-discord {
-  background: rgba(88, 101, 242, 0.12);
-  border: 1px solid rgba(88, 101, 242, 0.35);
-  color: #fff !important;
-  backdrop-filter: blur(10px);
-}
-
-.btn-discord:hover {
-  background: var(--discord-blurple);
-  border-color: var(--discord-blurple);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.35);
-  color: #fff !important;
-}
-
-/* زر واتساب الراقي */
-.btn-whatsapp {
-  background: rgba(37, 211, 102, 0.12);
-  border: 1px solid rgba(37, 211, 102, 0.35);
+.btn-whatsapp.btn-shine {
+  background: rgba(37, 211, 102, 0.14);
+  border: 1px solid rgba(37, 211, 102, 0.4);
   color: #25d366 !important;
   backdrop-filter: blur(10px);
 }
-
-.btn-whatsapp:hover {
-  background: var(--whatsapp-green);
-  border-color: var(--whatsapp-green);
+.btn-whatsapp.btn-shine:hover {
+  background: #25d366 !important;
   color: #000 !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
 }
 
-/* زر دعم TikAlert الذهبي الملكي بالهيرو */
-.btn-support {
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
+.btn-support.btn-shine {
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.4);
   color: #fbbf24 !important;
   backdrop-filter: blur(10px);
 }
-
-.btn-support:hover {
-  background: var(--gold-accent);
-  border-color: var(--gold-accent);
+.btn-support.btn-shine:hover {
+  background: var(--gold-accent) !important;
   color: #000 !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45);
 }
 
-/* زر الدعم الرئيسي بكارت TikAlert */
-.btn-support-main {
+.btn-support-main.btn-shine {
   width: 100%;
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   color: #000 !important;
@@ -1652,17 +1686,14 @@ a {
   border-radius: 14px;
   border: none;
   box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-  transition: all 0.25s ease;
 }
-
-.btn-support-main:hover {
+.btn-support-main.btn-shine:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.55);
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #000 !important;
 }
 
-/* زر النافبار العلوي الهادئ الأنيق */
+/* 3. تأثير الخلل الرقمي لزر كيك في النافبار (Cyber Glitch) */
 .btn-kick-nav {
   display: inline-flex;
   align-items: center;
@@ -1674,13 +1705,22 @@ a {
   font-weight: 700;
   font-size: 0.9rem;
   box-shadow: 0 2px 15px rgba(83, 252, 24, 0.25);
-  transition: all 0.25s ease;
+  transition: transform 0.1s ease, background 0.2s ease;
   border: none;
   text-decoration: none;
 }
 
-.btn-kick-nav:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(83, 252, 24, 0.45);
+.btn-kick-nav.btn-glitch:hover {
+  animation: glitchShake 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  box-shadow: -3px 0 #ff0055, 3px 0 #00ffff, 0 0 25px rgba(83, 252, 24, 0.6);
   background: #68ff33;
+}
+
+@keyframes glitchShake {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(3px, 1px); }
+  80% { transform: translate(1px, -2px); }
+  100% { transform: translate(0); }
 }
