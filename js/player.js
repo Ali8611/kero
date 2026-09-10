@@ -3,13 +3,25 @@
  * Floating Audio Player with Playlist & Equalizer
  */
 
-// Playlist configuration - Only Hamo's track
+// Playlist configuration
 const PLAYLIST = [
   {
     title: 'الولا حمو جه (بكره يبقا بيه)',
     artist: 'حمو المرشدي 🔥',
     src: './assets/audio/el-wla-hamo-geh.m4a',
     duration: '3:30'
+  },
+  {
+    title: 'العيون الحلوه دي',
+    artist: 'حمو المرشدي وعمرو مصطفي 🎶',
+    src: './assets/audio/el-oyoon-el-helwa.m4a',
+    duration: '3:11'
+  },
+  {
+    title: 'مهرجان متحصن',
+    artist: 'حمو الجلاد والخال ⚡',
+    src: './assets/audio/methasan.m4a',
+    duration: '5:37'
   }
 ];
 
