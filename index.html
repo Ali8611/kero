@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيرو ميجا | KeroMega - الموقع الرسمي لصانع المحتوى والستريمر</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="الموقع الرسمي لصانع المحتوى والستريمر كيرو ميجا (KeroMega) - بثوث مباشرة، مقاطع ممتعة، فعاليات الجيمنج، ومجتمع اللاعبين.">
+  <meta name="keywords" content="KeroMega, كيرو ميجا, ستريمر, جيمنج, Kick, TikTok, ديسكورد, العاب, بث مباشر">
+  <meta name="author" content="KeroMega">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="كيرو ميجا | KeroMega - Gamer & Streamer">
+  <meta property="og:description" content="عاشق الألعاب وصانع محتوى يقدم كل جديد وممتع لعشاق الجيمنج! تابع البثوث المباشرة وانضم للمجتمع.">
+  <meta property="og:image" content="./assets/images/avatar.png">
+
+  <!-- Google Fonts: Cairo & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" href="./assets/images/avatar.png">
+</head>
+<body>
+
+  <!-- Ambient Light & Grid Overlays -->
+  <div class="bg-grid-overlay"></div>
+  <div class="ambient-light-1"></div>
+  <div class="ambient-light-2"></div>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#" class="brand-logo">
+        <div class="logo-badge">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <span class="brand-name">KeroMega</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#channels" class="nav-link">المنصات</a></li>
+          <li><a href="#support" class="nav-link">الدعم المالي</a></li>
+          <li><a href="#about" class="nav-link">عن كيرو</a></li>
+          <li><a href="#community" class="nav-link">المجتمع</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="btn-kick-nav">
+          <span class="pulse-dot"></span>
+          <span>شاهد البث على Kick</span>
+          <i class="fas fa-play"></i>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-wrapper">
+      
+      <!-- Avatar with glowing border & Live badge -->
+      <div class="avatar-container">
+        <div class="avatar-halo"></div>
+        <div class="avatar-ring"></div>
+        <img src="./assets/images/avatar.png" alt="كيرو ميجا - KeroMega Avatar" class="avatar-img" onerror="this.src='https://cdn.discordapp.com/attachments/1445847698023649472/1547663798582648922/image.png?ex=6aa43dbb&is=6aa2ec3b&hm=4ed5eb54d85957efddb60f6ee080ea68fd3f3b9d584672991a86d3a2d3cbc23e&'">
+        
+        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="live-status-pill" title="اضغط لمشاهدة البث المباشر">
+          <span class="live-indicator"></span>
+          <span>LIVE ON KICK · KeroMega12</span>
+        </a>
+      </div>
+
+      <h1 class="hero-title">
+        مرحباً بكم مع <span class="name-gradient">كيرو ميجا</span>
+      </h1>
+
+      <div class="hero-subtitle">
+        <span>Gamer</span>
+        <span class="dot-separator">•</span>
+        <span>Streamer</span>
+        <span class="dot-separator">•</span>
+        <span>Content Creator</span>
+      </div>
+
+      <p class="hero-bio-short">
+        عاشق للألعاب ومقدم بثوث حماسية ومحتوى جيمنج فريد! استمتع بأقوى اللحظات والتحديات وكن جزءاً من عائلتنا.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fas fa-satellite-dish"></i>
+          <span>بث Kick المباشر</span>
+        </a>
+        <a href="https://tikalert-eg.com/KeroMega" target="_blank" rel="noopener noreferrer" class="btn btn-support">
+          <i class="fas fa-gem"></i>
+          <span>ادعم كيرو ميجا</span>
+        </a>
+        <a href="https://discord.gg/u534rhbg8k" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+          <i class="fab fa-discord"></i>
+          <span>سيرفر الديسكورد</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Channels & Links Grid -->
+  <section class="section" id="channels">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-link"></i> روابط المنصات</span>
+        <h2 class="section-title">قنوات وحسابات كيرو ميجا الرسمية</h2>
+        <p class="section-desc">تابع كيرو على جميع المنصات لتكون أول من يشاهد المقاطع والبثوث والإشعارات الحصرية.</p>
+      </div>
+
+      <div class="channels-grid">
+        
+        <!-- Kick Card -->
+        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="channel-card kick">
+          <div class="channel-icon-wrap">
+            <i class="fas fa-play"></i>
+          </div>
+          <div class="channel-info">
+            <h3>منصة كيك (Kick)</h3>
+            <div class="channel-handle">@KeroMega12</div>
+            <p class="channel-desc">البثوث المباشرة الحماسية، لقطات الأكشن والتفاعل المباشر مع المتابعين يومياً.</p>
+          </div>
+          <div class="channel-action">
+            <span>شاهد البث الآن</span>
+            <i class="fas fa-arrow-left"></i>
+          </div>
+        </a>
+
+        <!-- TikTok Card -->
+        <a href="https://www.tiktok.com/@keromega?_r=1&_t=ZS-99cdV7l7yGe" target="_blank" rel="noopener noreferrer" class="channel-card tiktok">
+          <div class="channel-icon-wrap">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="channel-info">
+            <h3>تيك توك (TikTok)</h3>
+            <div class="channel-handle">@keromega</div>
+            <p class="channel-desc">أقوى الكليبات السريعة، اللقطات الكوميدية، وتحديات الجيمنج القصيرة الأكثر مشاهدة.</p>
+          </div>
+          <div class="channel-action">
+            <span>متابعة على TikTok</span>
+            <i class="fas fa-arrow-left"></i>
+          </div>
+        </a>
+
+        <!-- Discord Card -->
+        <a href="https://discord.gg/u534rhbg8k" target="_blank" rel="noopener noreferrer" class="channel-card discord">
+          <div class="channel-icon-wrap">
+            <i class="fab fa-discord"></i>
+          </div>
+          <div class="channel-info">
+            <h3>ديسكورد (Discord)</h3>
+            <div class="channel-handle">discord.gg/u534rhbg8k</div>
+            <p class="channel-desc">بيت اللاعبين! غرف صوتية للعب الجماعي، بطولات مجتمعية، ودردشة مفتوحة 24/7.</p>
+          </div>
+          <div class="channel-action">
+            <span>انضم للسيرفر</span>
+            <i class="fas fa-arrow-left"></i>
+          </div>
+        </a>
+
+        <!-- WhatsApp Card -->
+        <a href="https://whatsapp.com/channel/0029Vb7Y1IIBA1f5n2m7a32W" target="_blank" rel="noopener noreferrer" class="channel-card whatsapp">
+          <div class="channel-icon-wrap">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="channel-info">
+            <h3>قناة الواتساب الرسمية</h3>
+            <div class="channel-handle">WhatsApp Channel</div>
+            <p class="channel-desc">تنبيهات فورية عند انطلاق أي بث مباشر وأخبار حصرية تصلك مباشرة أولاً بأول.</p>
+          </div>
+          <div class="channel-action">
+            <span>متابعة القناة</span>
+            <i class="fas fa-arrow-left"></i>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section (TikAlert VIP) -->
+  <section class="section" id="support">
+    <div class="container">
+      <div class="support-card">
+        <div class="support-inner">
+          <div class="support-content">
+            <span class="section-tag" style="background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: var(--gold-accent);">
+              <i class="fas fa-crown"></i> دعم المحتوى والبثوث
+            </span>
+            <h3>ادعم مسيرة <span class="support-highlight">كيرو ميجا</span> في الجيمنج</h3>
+            <p class="support-text">
+              مساهمتك المادية تساعد بشكل مباشر في تطوير معدات البث، تنظيم بطولات وجوائز للمتابعين، وتقديم محتوى أكثر احترافية وإمتاعاً!
+            </p>
+            <ul class="support-perks">
+              <li><i class="fas fa-check-circle"></i> ظهور اسمك ورسالتك وتنبيه صوتي مميز على شاشة البث مباشرة.</li>
+              <li><i class="fas fa-check-circle"></i> رتب وشارات خاصة للمدعمين في سيرفر الديسكورد ومجتمع كيرو.</li>
+              <li><i class="fas fa-check-circle"></i> دعم سريع وآمن عبر منصة TikAlert المعتمدة.</li>
+            </ul>
+          </div>
+
+          <div class="support-action-box">
+            <div class="support-badge-icon">
+              <i class="fas fa-hand-holding-dollar"></i>
+            </div>
+            <div class="support-platform-name">منصة TikAlert الرسمية</div>
+            <div class="support-platform-sub">الدعم المالي المباشر للبثوث</div>
+            <a href="https://tikalert-eg.com/KeroMega" target="_blank" rel="noopener noreferrer" class="btn btn-support-main">
+              <span>ادعم كيرو ميجا 💎</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-user"></i> من هو كيرو ميجا</span>
+        <h2 class="section-title">رحلة الشغف والمتعة في الجيمنج</h2>
+        <p class="section-desc">تعرف على قصة كيرو ميجا وأهدافه في عالم صناعة محتوى الألعاب.</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Main Bio Card -->
+        <div class="about-main-card">
+          <div>
+            <div class="about-intro-title">
+              <i class="fas fa-gamepad" style="color: var(--kick-green);"></i>
+              <span>🎮 مرحبًا بكم في عالم كيرو ميجا 🎮</span>
+            </div>
+            
+            <div class="about-bio-paragraphs">
+              <p>
+                أنا <strong>كيرو ميجا (KeroMega)</strong>، عاشق الألعاب وصانع محتوى بيقدم كل جديد وممتع لعشاق الجيمنج!
+              </p>
+              <p>
+                🔥 <strong>بثوث مباشرة:</strong> مليانة حماس وأكشن وتحديات غير متوقعة في مختلف الألعاب التنافسية والقصصية.
+              </p>
+              <p>
+                🎥 <strong>فيديوهات حصرية:</strong> استعراض لأفضل الألعاب وتجارب فريدة مع لقطات استثنائية.
+              </p>
+              <p>
+                💡 <strong>نصائح وأسرار:</strong> شروحات واستراتيجيات ذكية تساعدك تطور مهاراتك ومستواك في اللعب.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-feature-cards">
+            <div class="about-feature-box">
+              <i class="fas fa-fire"></i>
+              <h4>حماس مستمر</h4>
+              <p>طاقة إيجابية وأجواء مليانة ضحك وأكشن</p>
+            </div>
+            <div class="about-feature-box">
+              <i class="fas fa-trophy"></i>
+              <h4>تحديات وبطولات</h4>
+              <p>مشاركات ومنافسات قوية مع المتابعين</p>
+            </div>
+            <div class="about-feature-box">
+              <i class="fas fa-users"></i>
+              <h4>عائلة واحدة</h4>
+              <p>مجتمع راقي يحترم ويجمع كل محبي الألعاب</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Card: Games & Stream Info -->
+        <div class="about-side-card">
+          <div class="side-title">
+            <i class="fas fa-dice" style="color: var(--cyber-blue);"></i>
+            <span>أبرز تصنيفات الألعاب</span>
+          </div>
+
+          <div class="game-tags">
+            <span class="game-tag"><i class="fas fa-crosshairs"></i> ألعاب تصويب (FPS)</span>
+            <span class="game-tag"><i class="fas fa-parachute-box"></i> باتل رويال (Battle Royale)</span>
+            <span class="game-tag"><i class="fas fa-ghost"></i> ألعاب رعب (Horror Games)</span>
+            <span class="game-tag"><i class="fas fa-book-open"></i> ألعاب قصصية (Story Mode)</span>
+            <span class="game-tag"><i class="fas fa-car"></i> عالم مفتوح وسباقات (Open World)</span>
+            <span class="game-tag"><i class="fas fa-shield-halved"></i> ألعاب بقاء وتحدي (Survival)</span>
+          </div>
+
+          <div class="setup-stats">
+            <div class="stat-item">
+              <span class="stat-label"><i class="fas fa-desktop"></i> منصة البث الأساسية:</span>
+              <span class="stat-val" style="color: var(--kick-green);">Kick Streaming</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label"><i class="fas fa-video"></i> جودة البث:</span>
+              <span class="stat-val">1080p 60FPS Ultra</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label"><i class="fas fa-microphone-lines"></i> الصوت والموسيقى:</span>
+              <span class="stat-val">Studio Quality Pro</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="section" id="community">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-comments"></i> مجتمع اللاعبين</span>
+        <h2 class="section-title">انضم إلى مجتمع كيرو ميجا</h2>
+        <p class="section-desc">لا تفوت أي جديد! كن جزءاً من أفراد العائلة في السيرفرات والقنوات الرسمية.</p>
+      </div>
+
+      <div class="community-grid">
+        
+        <!-- Discord Card -->
+        <div class="community-card discord">
+          <div class="community-icon">
+            <i class="fab fa-discord"></i>
+          </div>
+          <h3>سيرفر الديسكورد الرسمي</h3>
+          <p>
+            تجمع يومي للدردشة مع كيرو وباقي الشباب، قنوات صوتية مخصصة للعب الجماعي، بطولات وجوائز شهرية، ومشاركة ميمز وكليبات البث.
+          </p>
+          <a href="https://discord.gg/u534rhbg8k" target="_blank" rel="noopener noreferrer" class="btn btn-discord">
+            <i class="fab fa-discord"></i>
+            <span>دخول سيرفر الديسكورد</span>
+          </a>
+        </div>
+
+        <!-- WhatsApp Channel Card -->
+        <div class="community-card whatsapp">
+          <div class="community-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>قناة الواتساب الحصرية</h3>
+          <p>
+            أسهل وأسرع وسيلة لمعرفة مواعيد البثوث قبل ما تبدأ، واستطلاعات رأي لاختيار الألعاب القادمة، وتنبيهات مباشرة على هاتفك دون إزعاج.
+          </p>
+          <a href="https://whatsapp.com/channel/0029Vb7Y1IIBA1f5n2m7a32W" target="_blank" rel="noopener noreferrer" class="btn" style="background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.4); color: var(--whatsapp-green);">
+            <i class="fab fa-whatsapp"></i>
+            <span>متابعة قناة الواتساب</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Music Player Widget -->
+  <div class="music-player-container">
+    
+    <!-- Playlist Drawer Popover -->
+    <div class="playlist-drawer" id="playerPlaylistDrawer">
+      <div class="playlist-header">
+        <span><i class="fas fa-list-ul"></i> قائمة تشغيل كيرو ميجا</span>
+        <span style="font-size: 0.8rem; color: var(--kick-green);">Gaming Vibes</span>
+      </div>
+      <div class="playlist-items" id="playlistItems">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Main Player Bar -->
+    <div class="music-player-card">
+      
+      <!-- Track Info -->
+      <div class="player-track-info">
+        <div class="disc-art">
+          <i class="fas fa-compact-disc"></i>
+        </div>
+        <div class="track-details">
+          <div class="track-title" id="playerTrackTitle">الولا حمو جه (بكره يبقا بيه)</div>
+          <div class="track-artist">
+            <span id="playerTrackArtist">حمو المرشدي 🔥</span>
+            <!-- Animated Equalizer Bars -->
+            <span class="equalizer-wave">
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+              <span class="eq-bar"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls & Progress Center -->
+      <div class="player-controls-center">
+        <div class="player-buttons">
+          <button class="btn-player" id="playerPrevBtn" title="الأغنية السابقة" aria-label="السابق">
+            <i class="fas fa-step-forward"></i> <!-- Forward icon in RTL acts as prev -->
+          </button>
+          <button class="btn-player btn-player-play" id="playerPlayBtn" title="تشغيل / إيقاف" aria-label="تشغيل">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="btn-player" id="playerNextBtn" title="الأغنية التالية" aria-label="التالي">
+            <i class="fas fa-step-backward"></i> <!-- Backward icon in RTL acts as next -->
+          </button>
+        </div>
+
+        <div class="timeline-wrap">
+          <span class="time-display" id="playerCurrentTime">0:00</span>
+          <div class="progress-bar-container" id="playerProgressBar">
+            <div class="progress-bar-fill" id="playerProgressFill">
+              <div class="progress-bar-thumb"></div>
+            </div>
+          </div>
+          <span class="time-display" id="playerDuration">3:30</span>
+        </div>
+      </div>
+
+      <!-- Extra Controls (Volume, Playlist, Minimize) -->
+      <div class="player-extra-controls">
+        <div class="volume-wrapper">
+          <button class="btn-player" id="playerMuteBtn" title="كتم الصوت">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input type="range" class="volume-slider" id="playerVolumeSlider" min="0" max="1" step="0.05" value="0.75" title="مستوى الصوت">
+        </div>
+
+        <button class="btn-playlist-toggle" id="playerPlaylistToggle" title="قائمة الأغاني">
+          <i class="fas fa-list-music"></i>
+        </button>
+
+        <button class="btn-player-minimize" id="playerMinimizeBtn" title="تصغير المشغل">
+          <i class="fas fa-minus"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-social-links">
+        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Kick">
+          <i class="fas fa-play"></i>
+        </a>
+        <a href="https://www.tiktok.com/@keromega?_r=1&_t=ZS-99cdV7l7yGe" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://discord.gg/u534rhbg8k" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb7Y1IIBA1f5n2m7a32W" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://tikalert-eg.com/KeroMega" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="TikAlert Support">
+          <i class="fas fa-gem"></i>
+        </a>
+      </div>
+
+      <div class="footer-badge">
+        <i class="fas fa-gamepad" style="color: var(--kick-green);"></i>
+        <span>مجتمع كيرو ميجا الأسطوري · بيتنا الثاني</span>
+      </div>
+
+      <p class="footer-text">
+        © 2026 جميع الحقوق محفوظة لـ <strong>KeroMega (كيرو ميجا)</strong> · صُمم بكل احترافية لعشاق الجيمنج والبثوث
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/player.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
