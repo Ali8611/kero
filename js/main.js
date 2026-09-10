@@ -89,5 +89,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 5. Kick Stream Live Status Real-time Checker
+  const livePill = document.getElementById('liveStatusPill');
+  const liveStatusText = document.getElementById('liveStatusText');
+  const navKickText = document.getElementById('navKickText');
+
+  function updateLiveStatusUI(isLive) {
+    if (!livePill) return;
+
+    if (isLive) {
+      livePill.classList.remove('is-offline');
+      livePill.classList.add('is-live');
+      if (liveStatusText) liveStatusText.textContent = 'LIVE ON KICK · بث مباشر الآن 🔴';
+      if (navKickText) navKickText.textContent = 'شاهد البث الآن 🔥';
+      livePill.title = 'اضغط لمشاهدة البث المباشر على Kick';
+    } else {
+      livePill.classList.remove('is-live');
+      livePill.classList.add('is-offline');
+      if (liveStatusText) liveStatusText.textContent = 'OFFLINE · ترقبوا البث القادم 💤';
+      if (navKickText) navKickText.textContent = 'قناة كيك · KeroMega';
+      livePill.title = 'كيرو غير متصل حالياً - اضغط لزيارة القناة';
+    }
+  }
+
+  // Fetch status.json (updated automatically by GitHub Action)
+  function checkKickStatus() {
+    fetch('./status.json?_nocache=' + Date.now())
+      .then(res => {
+        if (!res.ok) throw new Error('status.json unreachable');
+        return res.json();
+      })
+      .then(data => {
+        updateLiveStatusUI(Boolean(data.isLive));
+      })
+      .catch(err => {
+        console.log('Using default offline status:', err);
+        updateLiveStatusUI(false);
+      });
+  }
+
+  checkKickStatus();
+
   console.log('⚡ KeroMega Official Website Loaded Successfully! Welcome, gamers!');
 });

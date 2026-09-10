@@ -59,7 +59,7 @@
       <div class="nav-actions">
         <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="btn-kick-nav btn-glitch">
           <span class="pulse-dot"></span>
-          <span>شاهد البث على Kick</span>
+          <span id="navKickText">قناة كيك · KeroMega</span>
           <i class="fas fa-play"></i>
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
@@ -79,9 +79,9 @@
         <div class="avatar-ring"></div>
         <img src="./assets/images/avatar.png" alt="كيرو ميجا - KeroMega Avatar" class="avatar-img" onerror="this.src='https://cdn.discordapp.com/attachments/1445847698023649472/1547663798582648922/image.png?ex=6aa43dbb&is=6aa2ec3b&hm=4ed5eb54d85957efddb60f6ee080ea68fd3f3b9d584672991a86d3a2d3cbc23e&'">
         
-        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="live-status-pill" title="اضغط لمشاهدة البث المباشر">
-          <span class="live-indicator"></span>
-          <span>LIVE ON KICK · KeroMega12</span>
+        <a href="https://kick.com/KeroMega12" target="_blank" rel="noopener noreferrer" class="live-status-pill is-offline" id="liveStatusPill" title="كيرو غير متصل حالياً - اضغط لزيارة القناة">
+          <span class="live-indicator" id="liveIndicator"></span>
+          <span id="liveStatusText">OFFLINE · ترقبوا البث القادم 💤</span>
         </a>
       </div>
 

@@ -1,0 +1,60 @@
+﻿name: Check Kick Stream Status
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Check Kick Stream Status
+        run: |
+          python -c "
+          import urllib.request, json, os, datetime
+          
+          url = 'https://kick.com/api/v2/channels/KeroMega12'
+          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+          
+          try:
+              with urllib.request.urlopen(req, timeout=10) as resp:
+                  data = json.loads(resp.read().decode())
+                  is_live = data.get('livestream') is not None
+          except Exception as e:
+              print(f'Error fetching Kick API: {e}')
+              # Keep previous status if request fails
+              if os.path.exists('status.json'):
+                  with open('status.json', 'r') as f:
+                      is_live = json.load(f).get('isLive', False)
+              else:
+                  is_live = False
+
+          new_status = {
+              'isLive': is_live,
+              'channel': 'KeroMega12',
+              'updatedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+          }
+
+          with open('status.json', 'w', encoding='utf-8') as f:
+              json.dump(new_status, f, indent=2)
+          print(f'Updated status.json: isLive={is_live}')
+          "
+
+      - name: Commit and Push Status Change
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          git diff --staged --quiet || (git commit -m "Auto-update Kick live status" && git push)
