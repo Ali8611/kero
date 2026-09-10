@@ -3,31 +3,13 @@
  * Floating Audio Player with Playlist & Equalizer
  */
 
-// Playlist configuration - easy to add or edit tracks
+// Playlist configuration - Only Hamo's track
 const PLAYLIST = [
   {
     title: 'الولا حمو جه (بكره يبقا بيه)',
     artist: 'حمو المرشدي 🔥',
     src: './assets/audio/el-wla-hamo-geh.m4a',
     duration: '3:30'
-  },
-  {
-    title: 'Cyber Stream',
-    artist: 'KeroMega Vibes',
-    src: './assets/audio/cyber-stream.wav',
-    duration: '0:18'
-  },
-  {
-    title: 'Neon Vibes (Lo-Fi)',
-    artist: 'Gaming Chills',
-    src: './assets/audio/neon-vibes.wav',
-    duration: '0:20'
-  },
-  {
-    title: 'Gaming Rush',
-    artist: 'Action Arena',
-    src: './assets/audio/gaming-rush.wav',
-    duration: '0:16'
   }
 ];
 
