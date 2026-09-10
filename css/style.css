@@ -1557,7 +1557,7 @@ a {
 }
 
 /* ==========================================================================
-   Cohesive Gaming Buttons Styles (Glitch, Cyber, Laser Shine - NO Spinning)
+   Ultimate 3D Tactile Gaming Buttons (Mechanical Arcade Depth & Press)
    ========================================================================== */
 
 .btn {
@@ -1565,54 +1565,23 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  padding: 0.85rem 1.8rem;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 0.98rem;
+  padding: 0.9rem 1.85rem;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
   position: relative;
   overflow: hidden;
   letter-spacing: -0.2px;
   border: none;
-}
-
-/* 1. زر السايبربانك بزوايا مقصوصة للديسكورد (Clipped Neon Button) */
-.btn-cyber {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-  padding: 12px 28px;
-  background: #0d111a;
-  color: #5865f2 !important;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border: none;
-  cursor: pointer;
-  clip-path: polygon(14px 0%, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0% 14px);
-  border-left: 3px solid #5865f2;
-  transition: all 0.3s ease;
+  outline: none;
+  user-select: none;
+  transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.12s cubic-bezier(0, 0, 0.2, 1), filter 0.2s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   text-decoration: none;
 }
 
-.btn-cyber:hover {
-  background: #5865f2 !important;
-  color: #fff !important;
-  box-shadow: 0 0 25px rgba(88, 101, 242, 0.6);
-  transform: translateY(-2px);
-}
-
-/* 2. تأثير مسحة الليزر الهولوجرامية (Laser Shine Sweep - راقي وبدون أي لف) */
-.btn-shine {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
+/* 1. تأثير مسحة وميض الليزر الزجاجي على سطح الزر المجسم 3D */
 .btn-shine::after {
   content: '';
   position: absolute;
@@ -1623,7 +1592,7 @@ a {
   background: linear-gradient(
     60deg,
     rgba(255, 255, 255, 0) 10%,
-    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0.7) 50%,
     rgba(255, 255, 255, 0) 90%
   );
   transform: rotate(25deg);
@@ -1633,94 +1602,142 @@ a {
 
 .btn-shine:hover::after {
   left: 140%;
-  transition: 0.75s ease-in-out;
+  transition: 0.7s ease-in-out;
 }
 
-/* تخصيصات أزرار الليزر حسب لون المنصة */
-.btn-primary.btn-shine {
-  background: linear-gradient(135deg, var(--kick-green) 0%, #00c853 100%);
+/* 2. زر بث Kick المباشر ثلاثي الأبعاد (Kick Neon 3D) */
+.btn-primary {
+  background: linear-gradient(180deg, #5dfc22 0%, #36cb06 100%);
   color: #000 !important;
-  font-weight: 800;
-  box-shadow: 0 4px 18px rgba(83, 252, 24, 0.25);
-  border: 1px solid rgba(83, 252, 24, 0.4);
-}
-.btn-primary.btn-shine:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(83, 252, 24, 0.55);
-  background: linear-gradient(135deg, #68ff33 0%, #00e676 100%);
+  box-shadow: 0 6px 0 #1b8500, 0 10px 22px rgba(83, 252, 24, 0.35);
 }
 
-.btn-whatsapp.btn-shine {
-  background: rgba(37, 211, 102, 0.14);
-  border: 1px solid rgba(37, 211, 102, 0.4);
-  color: #25d366 !important;
-  backdrop-filter: blur(10px);
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #1b8500, 0 14px 28px rgba(83, 252, 24, 0.55);
+  filter: brightness(1.08);
 }
-.btn-whatsapp.btn-shine:hover {
-  background: #25d366 !important;
+
+.btn-primary:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #1b8500, 0 4px 10px rgba(83, 252, 24, 0.3) !important;
+}
+
+/* 3. زر ديسكورد ثلاثي الأبعاد (Discord Blurple 3D) */
+.btn-discord {
+  background: linear-gradient(180deg, #6c78ff 0%, #5865f2 100%);
+  color: #fff !important;
+  box-shadow: 0 6px 0 #323ba6, 0 10px 22px rgba(88, 101, 242, 0.35);
+}
+
+.btn-discord:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #323ba6, 0 14px 28px rgba(88, 101, 242, 0.55);
+  filter: brightness(1.1);
+}
+
+.btn-discord:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #323ba6, 0 4px 10px rgba(88, 101, 242, 0.3) !important;
+}
+
+/* 4. زر واتساب ثلاثي الأبعاد (WhatsApp Green 3D) */
+.btn-whatsapp {
+  background: linear-gradient(180deg, #2fe673 0%, #20be5b 100%);
   color: #000 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 6px 0 #107536, 0 10px 22px rgba(37, 211, 102, 0.35);
 }
 
-.btn-support.btn-shine {
-  background: rgba(245, 158, 11, 0.14);
-  border: 1px solid rgba(245, 158, 11, 0.4);
-  color: #fbbf24 !important;
-  backdrop-filter: blur(10px);
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #107536, 0 14px 28px rgba(37, 211, 102, 0.55);
+  filter: brightness(1.08);
 }
-.btn-support.btn-shine:hover {
-  background: var(--gold-accent) !important;
+
+.btn-whatsapp:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #107536, 0 4px 10px rgba(37, 211, 102, 0.3) !important;
+}
+
+/* 5. زر الدعم المالي TikAlert ثلاثي الأبعاد (Gold 3D Coin) */
+.btn-support {
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
   color: #000 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.45);
+  box-shadow: 0 6px 0 #925100, 0 10px 22px rgba(245, 158, 11, 0.35);
 }
 
-.btn-support-main.btn-shine {
+.btn-support:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #925100, 0 14px 28px rgba(245, 158, 11, 0.55);
+  filter: brightness(1.1);
+}
+
+.btn-support:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #925100, 0 4px 10px rgba(245, 158, 11, 0.3) !important;
+}
+
+.btn-support-main {
   width: 100%;
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
   color: #000 !important;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 800;
-  padding: 0.95rem 1.6rem;
+  padding: 1rem 1.6rem;
   border-radius: 14px;
   border: none;
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-}
-.btn-support-main.btn-shine:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.55);
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 0 #925100, 0 12px 25px rgba(245, 158, 11, 0.4);
+  cursor: pointer;
+  transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.12s cubic-bezier(0, 0, 0.2, 1), filter 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  position: relative;
+  overflow: hidden;
 }
 
-/* 3. تأثير الخلل الرقمي لزر كيك في النافبار (Cyber Glitch) */
+.btn-support-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #925100, 0 16px 32px rgba(245, 158, 11, 0.6);
+  filter: brightness(1.1);
+}
+
+.btn-support-main:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #925100, 0 4px 10px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* 6. زر النافبار العلوي ثلاثي الأبعاد (Nav Kick 3D) */
 .btn-kick-nav {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: var(--kick-green);
+  background: linear-gradient(180deg, #5dfc22 0%, #3cdb07 100%);
   color: #000 !important;
-  padding: 0.55rem 1.25rem;
+  padding: 0.6rem 1.35rem;
   border-radius: 100px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 15px rgba(83, 252, 24, 0.25);
-  transition: transform 0.1s ease, background 0.2s ease;
+  font-weight: 800;
+  font-size: 0.92rem;
+  box-shadow: 0 4px 0 #1b8500, 0 8px 18px rgba(83, 252, 24, 0.3);
+  transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.12s cubic-bezier(0, 0, 0.2, 1), filter 0.2s ease;
   border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-kick-nav.btn-glitch:hover {
-  animation: glitchShake 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-  box-shadow: -3px 0 #ff0055, 3px 0 #00ffff, 0 0 25px rgba(83, 252, 24, 0.6);
-  background: #68ff33;
+.btn-kick-nav:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #1b8500, 0 10px 22px rgba(83, 252, 24, 0.5);
+  filter: brightness(1.08);
 }
 
-@keyframes glitchShake {
-  0% { transform: translate(0); }
-  20% { transform: translate(-3px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(3px, 1px); }
-  80% { transform: translate(1px, -2px); }
-  100% { transform: translate(0); }
+.btn-kick-nav:active {
+  transform: translateY(3px) !important;
+  box-shadow: 0 1px 0 #1b8500, 0 2px 8px rgba(83, 252, 24, 0.3) !important;
 }
